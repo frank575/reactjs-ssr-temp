@@ -1,0 +1,40 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #1b1b1b;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  :global {
+    .logo {
+      width: 212px;
+      height: 150px;
+      position: relative;
+      z-index: -1;
+      &:local {
+        animation: rotate infinite 12s linear;
+      }
+    }
+    .title {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    .tip {
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
