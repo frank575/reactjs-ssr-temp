@@ -1,21 +1,7 @@
 import { Link, Route, Switch } from 'react-router-dom'
-import About from '@/pages/About'
-import Home from '@/pages/Home'
+import routes from '../routes.js'
 
-const routes = [
-	{
-		component: Home,
-		name: 'Home',
-		path: '/',
-	},
-	{
-		component: About,
-		name: 'About',
-		path: '/about',
-	},
-]
-
-export function App() {
+function App() {
 	return (
 		<>
 			{/*<nav>*/}
@@ -42,3 +28,5 @@ export function App() {
 		</>
 	)
 }
+
+export default App
